@@ -1,0 +1,995 @@
+OS: Debian GNU/Linux 12 (bookworm)
+OS architecture: 64-bit
+Last updated Pi-Apps on: 06/29/2025
+Latest Pi-Apps version: 06/30/2025
+Kernel: aarch64 6.12.25+rpt-rpi-2712
+Device model: Raspberry Pi 5 Model B Rev 1.0
+SOC identifier: bcm2712
+Machine-id (hashed): 791a2db706e6e3a173e0641d98f55b2f04aa487a
+Serial-number (hashed): 9bbc26a82c223cc8722eb1d45397c229560755ca
+Cpu name: Cortex-A76
+Ram size: 8.06 GB
+Raspberry Pi OS image version: 2025-05-13
+Language: en_US.UTF-8
+
+BEGINNING OF LOG FILE:
+-----------------------
+
+Downloading bvm repository... Done
+Installing dependencies, please wait...
+Will install these packages: qemu-utils qemu-system-arm qemu-system-gui qemu-efi-aarch64 remmina remmina-plugin-rdp nmap uuid-runtime seabios ipxe-qemu wimtools netcat-traditional freerdp2-wayland 
+Creating an empty apt-package to install the necessary apt packages...
+It will be named: pi-apps-c9f5ac99
+Depends: freerdp2-wayland, ipxe-qemu, netcat-traditional, nmap, qemu-efi-aarch64, qemu-system-arm, qemu-system-gui, qemu-utils, remmina, remmina-plugin-rdp, seabios, uuid-runtime, wimtools
+Running sudo apt update...
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://archive.raspberrypi.com/debian bookworm InRelease
+Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+Hit:4 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 https://download.docker.com/linux/debian bookworm InRelease
+Hit:6 https://mirrors.apqa.cn/proxmox/debian/pve bookworm InRelease
+Hit:7 https://adoptium.jfrog.io/artifactory/deb bookworm InRelease
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+apt update complete.
+Some packages can be upgraded. Please consider running sudo apt full-upgrade.
+Installing the pi-apps-c9f5ac99 package...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+The following packages have unmet dependencies:
+ qemu-system-gui : Depends: qemu-system-x86 (= 1:7.2+dfsg-7+deb12u13) or
+                            qemu-system-arm (= 1:7.2+dfsg-7+deb12u13) or
+                            qemu-system-mips (= 1:7.2+dfsg-7+deb12u13) or
+                            qemu-system-ppc (= 1:7.2+dfsg-7+deb12u13) or
+                            qemu-system-sparc (= 1:7.2+dfsg-7+deb12u13) or
+                            qemu-system-misc (= 1:7.2+dfsg-7+deb12u13)
+E: Unable to correct problems, you have held broken packages.
+Apt finished.
+Failed to install the packages!
+The APT reported these errors:
+E: Unable to correct problems, you have held broken packages.
+
+Failed to install Botspot Virtual Machine!
+â¢â£Need help? Copy the ENTIRE terminal output or take a screenshot.
+Please ask on Github: https://github.com/Botspot/pi-apps/issues/new/choose
+Or on Discord: https://discord.gg/RXSTvaUvuu
+Additional log diagnosis for developers below:
+
+Package: qemu-system-gui
+Source: qemu
+Version: 1:7.2+dfsg-7+deb12u13
+Installed-Size: 1359
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: qemu-system-common (<< 1:6.1+dfsg-4~)
+Depends: libc6 (>= 2.34), libcairo2 (>= 1.2.4), libepoxy0 (>= 1.0), libgbm1 (>= 12.0.0~0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.61.2), libgtk-3-0 (>= 3.21.4), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libnuma1 (>= 2.0.11), libpixman-1-0 (>= 0.19.6), libpulse0 (>= 0.99.1), libsdl2-2.0-0 (>= 2.0.12), libvirglrenderer1 (>= 0.8.0), libvte-2.91-0 (>= 0.49.92), libx11-6, qemu-system-x86 (= 1:7.2+dfsg-7+deb12u13) | qemu-system-arm (= 1:7.2+dfsg-7+deb12u13) | qemu-system-mips (= 1:7.2+dfsg-7+deb12u13) | qemu-system-ppc (= 1:7.2+dfsg-7+deb12u13) | qemu-system-sparc (= 1:7.2+dfsg-7+deb12u13) | qemu-system-misc (= 1:7.2+dfsg-7+deb12u13), libgl1
+Description-en: QEMU full system emulation binaries (user interface and audio support)
+ This package provides local graphical user interface (currently GTK)
+ and audio backends for full system emulation (qemu-system-*) packages.
+ .
+ The default GTK based qemu-system-gui is generally better and recommended,
+ but a few corner cases still need SDL which is therefore provided as well.
+Description-md5: 6b583b414244908259538d87e8713531
+Homepage: http://www.qemu.org/
+Tag: uitoolkit::gtk, uitoolkit::sdl
+Section: otherosfs
+Priority: optional
+Filename: pool/main/q/qemu/qemu-system-gui_7.2+dfsg-7+deb12u13_arm64.deb
+Size: 298404
+MD5sum: 7f6b08c640ab83872b508b096c39b75f
+SHA256: 09bafb27e7d2bcc6eded5dde1ff8be1c9551615414f50266840a1196cf3ec874
+
+Package: qemu-system-x86
+Source: qemu
+Version: 1:7.2+dfsg-7+deb12u13
+Installed-Size: 35635
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: arm64
+Provides: qemu-system-i386, qemu-system-x86-64
+Depends: libaio1 (>= 0.3.93), libbpf1 (>= 1:0.0.8), libc6 (>= 2.34), libcapstone4 (>= 4), libfdt1 (>= 1.6.1), libfuse3-3 (>= 3.2.3), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.67.3), libgmp10 (>= 2:6.2.1+dfsg1), libgnutls30 (>= 3.7.5), libhogweed6, libibverbs1 (>= 28), libjpeg62-turbo (>= 1.3.1), libnettle8, libnuma1 (>= 2.0.11), libpixman-1-0 (>= 0.19.6), libpmem1 (>= 1.4), libpng16-16 (>= 1.6.2-1), librdmacm1 (>= 1.0.15), libsasl2-2 (>= 2.1.28+dfsg), libseccomp2 (>= 2.1.0), libslirp0 (>= 4.7.0), libudev1 (>= 183), liburing2 (>= 2.3), libvdeplug2 (>= 4.0.1), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.0), qemu-system-common (= 1:7.2+dfsg-7+deb12u13), qemu-system-data (>> 1:7.2+dfsg~), seabios, ipxe-qemu
+Recommends: qemu-system-gui (= 1:7.2+dfsg-7+deb12u13), qemu-utils, ovmf, qemu-block-extra (= 1:7.2+dfsg-7+deb12u13)
+Suggests: samba, vde2
+Description-en: QEMU full system emulation binaries (x86)
+ QEMU is a fast processor emulator: currently the package supports
+ i386 and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following x86 hardware:  i386 x86_64.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+ .
+ On x86 host hardware this package also enables KVM kernel virtual machine
+ usage on systems which supports it.
+Description-md5: 2ad3dd27a937f58ca5b2ffccbe9c63b3
+Multi-Arch: foreign
+Homepage: http://www.qemu.org/
+Tag: uitoolkit::gtk, uitoolkit::ncurses, uitoolkit::sdl
+Section: otherosfs
+Priority: optional
+Filename: pool/main/q/qemu/qemu-system-x86_7.2+dfsg-7+deb12u13_arm64.deb
+Size: 6480100
+MD5sum: a5e4d6188cd1486a19066ad454cee001
+SHA256: 4c929202a32d976d18fde6380b05c39d07d5732d8479e6226e0e2f360e5cfac1
+
+qemu-system-gui:
+  Installed: (none)
+  Candidate: 1:7.2+dfsg-7+deb12u13
+  Version table:
+     1:7.2+dfsg-7+deb12u13 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+qemu-system-x86:
+  Installed: (none)
+  Candidate: 1:7.2+dfsg-7+deb12u13
+  Version table:
+     1:7.2+dfsg-7+deb12u13 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+Listing...
+qemu-system-gui/stable 1:7.2+dfsg-7+deb12u13 arm64
+
+qemu-system-gui/stable 1:7.2+dfsg-7+deb12u13 armhf
+
+qemu-system-x86/stable 1:7.2+dfsg-7+deb12u13 arm64
+
+qemu-system-x86/stable 1:7.2+dfsg-7+deb12u13 armhf
+
+NOTE: This is only a simulation!
+      apt-get needs root privileges for real execution.
+      Keep also in mind that locking is deactivated,
+      so don't depend on the relevance to the real current situation!
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  ceph-common ceph-fuse corosync criu cstream dkms dmeventd dtach ebtables
+  faketime fonts-font-awesome fonts-font-logos fonts-glyphicons-halflings
+  genisoimage glusterfs-client glusterfs-common hdparm idn ipset jc
+  libanyevent-http-perl libanyevent-perl libappconfig-perl libapt-pkg-perl
+  libasync-interrupt-perl libauthen-pam-perl libbasicusageenvironment1
+  libcephfs2 libcmap4 libcrypt-openssl-bignum-perl
+  libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl libdbi1
+  libdevel-cycle-perl libdevmapper-event1.02.1 libdigest-bubblebabble-perl
+  libev-perl libfaketime libfile-chdir-perl libfile-readbackwards-perl
+  libfilesys-df-perl libgfchangelog0 libglusterd0 libgnutlsxx30
+  libgoogle-perftools4 libgroupsock8 libguard-perl libio-multiplex-perl
+  libio-stringy-perl libipset13 libiscsi7 libjs-bootstrap libjs-extjs
+  libjs-qrcodejs libjs-sencha-touch libknet1 liblinux-inotify2-perl
+  liblivemedia77 liblvm2cmd2.03 libmime-base32-perl libnet-dns-perl
+  libnet-dns-sec-perl libnet-ip-perl libnet-libidn2-perl libnet-subnet-perl
+  libnet1 libnetaddr-ip-perl libnetfilter-log1 libnozzle1 libnvpair3linux
+  liboath0 libperl4-corelibs-perl libposix-strptime-perl libproxmox-acme-perl
+  libproxmox-acme-plugins libproxmox-backup-qemu0 libproxmox-rs-perl
+  libpve-access-control libpve-apiclient-perl libpve-cluster-api-perl
+  libpve-cluster-perl libpve-common-perl libpve-guest-common-perl
+  libpve-http-server-perl libpve-network-api-perl libpve-network-perl
+  libpve-notify-perl libpve-rs-perl libpve-storage-perl libpve-u2f-server-perl
+  libquorum5 librados2-perl libradosstriper1 librdkafka1 librgw2 librrd8
+  librrds-perl libstatgrab10 libstring-shellquote-perl libsubid4
+  libtcmalloc-minimal4 libtemplate-perl libthrift-0.17.0 libtpms0
+  libu2f-server0 libuuid-perl libuutil3linux libvirglrenderer1 libvotequorum8
+  libyaml-libyaml-perl libzfs6linux libzpool6linux
+  linux-headers-6.1.0-37-arm64 linux-headers-6.1.0-37-common
+  linux-headers-arm64 linux-kbuild-6.1 lvm2 lxc-pve lxcfs novnc-pve numactl
+  proxmox-archive-keyring proxmox-backup-client proxmox-backup-file-restore
+  proxmox-backup-restore-image proxmox-firewall proxmox-kernel-helper
+  proxmox-mail-forward proxmox-mini-journalreader proxmox-offline-mirror-docs
+  proxmox-offline-mirror-helper proxmox-termproxy proxmox-websocket-tunnel
+  proxmox-widget-toolkit pve-cluster pve-docs pve-edk2-firmware-legacy
+  pve-edk2-firmware-ovmf pve-firewall pve-i18n pve-lxc-syscalld pve-xtermjs
+  python3-ceph-argparse python3-ceph-common python3-cephfs python3-prettytable
+  python3-protobuf python3-rados python3-rbd python3-rgw python3-ruamel.yaml
+  python3-ruamel.yaml.clib python3-wcwidth python3-xmltodict qrencode
+  rrdcached smartmontools sqlite3 swtpm swtpm-libs swtpm-tools
+  thin-provisioning-tools uidmap vncterm xsltproc zfs-dkms zfs-zed
+  zfsutils-linux
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  ipxe-qemu libbrlapi0.8 libcacard0 libexecs0 libvdeplug2 qemu-system-common
+  qemu-system-data seabios
+Suggested packages:
+  samba vde2
+Recommended packages:
+  qemu-system-gui qemu-utils ovmf qemu-block-extra
+The following packages will be REMOVED:
+  proxmox-ve pve-container pve-ha-manager pve-manager pve-qemu-kvm qemu-server
+  spiceterm
+The following NEW packages will be installed:
+  ipxe-qemu libbrlapi0.8 libcacard0 libexecs0 libvdeplug2 qemu-system-common
+  qemu-system-data qemu-system-x86 seabios
+0 upgraded, 9 newly installed, 7 to remove and 4 not upgraded.
+Remv proxmox-ve [8.3.0]
+Remv pve-manager [8.3.3]
+Remv spiceterm [3.3.0]
+Remv pve-qemu-kvm [9.2.0-2] [qemu-server:arm64 ]
+Remv qemu-server [8.3.7] [pve-ha-manager:arm64 ]
+Remv pve-ha-manager [4.0.6] [pve-container:arm64 ]
+Remv pve-container [5.2.2+port1]
+Inst ipxe-qemu (1.0.0+git-20190125.36a4c85-5.1 Debian:12.11/stable [all])
+Inst libbrlapi0.8 (6.5-7+deb12u1 Debian:12.11/stable [arm64])
+Inst libcacard0 (1:2.8.0-3 Debian:12.11/stable [arm64])
+Inst libexecs0 (1.3-2 Debian:12.11/stable [arm64])
+Inst libvdeplug2 (4.0.1-4 Debian:12.11/stable [arm64])
+Inst qemu-system-common (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Inst qemu-system-data (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [all])
+Inst seabios (1.16.2-1 Debian:12.11/stable [all])
+Inst qemu-system-x86 (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Conf ipxe-qemu (1.0.0+git-20190125.36a4c85-5.1 Debian:12.11/stable [all])
+Conf libbrlapi0.8 (6.5-7+deb12u1 Debian:12.11/stable [arm64])
+Conf libcacard0 (1:2.8.0-3 Debian:12.11/stable [arm64])
+Conf libexecs0 (1.3-2 Debian:12.11/stable [arm64])
+Conf libvdeplug2 (4.0.1-4 Debian:12.11/stable [arm64])
+Conf qemu-system-common (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Conf qemu-system-data (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [all])
+Conf seabios (1.16.2-1 Debian:12.11/stable [all])
+Conf qemu-system-x86 (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+
+Package: freerdp2-wayland
+Source: freerdp2
+Version: 2.10.0+dfsg1-1
+Installed-Size: 205
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libfreerdp-client2-2 (= 2.10.0+dfsg1-1), libfreerdp2-2 (>= 2.3.0+dfsg1), libuwac0-0 (= 2.10.0+dfsg1-1), libwinpr2-2 (>= 2.1.0+dfsg1)
+Description-en: RDP client for Windows Terminal Services (wayland client)
+ FreeRDP is a libre client/server implementation of the Remote
+ Desktop Protocol (RDP).
+ .
+ Currently, the FreeRDP clients supports the following Windows Versions:
+ .
+  * Windows NT Server
+  * Windows 2000 Terminal Server
+  * Windows XP
+  * Windows 2003 Server
+  * Windows Vista
+  * Windows 2008/2008r2/2011SBS Server
+  * Windows 7
+  * Windows 2012/2012r2 Server
+  * Windows 8
+  * Windows 10
+ .
+ This package contains the wayland based client.
+Description-md5: a5e739176253fe4f397467dba68645a0
+Homepage: https://www.freerdp.com/
+Section: x11
+Priority: optional
+Filename: pool/main/f/freerdp2/freerdp2-wayland_2.10.0+dfsg1-1_arm64.deb
+Size: 45404
+MD5sum: 17bce0f4814fa31f164fc07fd6a6205a
+SHA256: 11a06234fa43b46a4f3414c516332dd933a16b834042f53b10ae4f8c986efc86
+
+Package: ipxe-qemu
+Source: ipxe
+Version: 1.0.0+git-20190125.36a4c85-5.1
+Installed-Size: 2556
+Maintainer: Bastian Blank <waldi@debian.org>
+Architecture: all
+Description-en: PXE boot firmware - ROM images for qemu
+ iPXE is network boot firmware.  It supports a variety of network cards,
+ including some wireless cards, and variety of network protocols (traditional
+ DHCP, BOOTP and TFTP and also HTTP, iSCSI, SAN via FCoE and Infiniband). It
+ supports scripting.
+ .
+ It is possible to use iPXE as a PXE ROM in the network card or to
+ chainload it from other boot methods.
+ .
+ This package provides boot code for the qemu emulated network cards in
+ as boot ROMs.
+Description-md5: 61c8bdd569b68d2eeeb8615a8b57f65e
+Multi-Arch: foreign
+Homepage: http://ipxe.org/
+Section: admin
+Priority: optional
+Filename: pool/main/i/ipxe/ipxe-qemu_1.0.0+git-20190125.36a4c85-5.1_all.deb
+Size: 766376
+MD5sum: 0a0dd8eab7a744fd3ad763dc8fcb49d0
+SHA256: 5c2419ce07f4d80ac5e88e32ac09cdc523c048af86c4730d682ba969d3189db2
+
+Package: netcat-traditional
+Source: netcat
+Version: 1.10-47
+Installed-Size: 139
+Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: arm64
+Provides: netcat
+Depends: libc6 (>= 2.17)
+Description-en: TCP/IP swiss army knife
+ A simple Unix utility which reads and writes data across network
+ connections using TCP or UDP protocol. It is designed to be a reliable
+ "back-end" tool that can be used directly or easily driven by other
+ programs and scripts. At the same time it is a feature-rich network
+ debugging and exploration tool, since it can create almost any kind
+ of connection you would need and has several interesting built-in
+ capabilities.
+ .
+ This is the "classic" netcat, written by *Hobbit*. It lacks many
+ features found in netcat-openbsd.
+Description-md5: 83fb6fcb16e6638fb447527fffff1e0a
+Homepage: http://www.stearns.org/nc/
+Tag: implemented-in::c, interface::commandline, protocol::tcp, protocol::udp,
+ role::program, scope::utility, use::transmission
+Section: net
+Priority: standard
+Filename: pool/main/n/netcat/netcat-traditional_1.10-47_arm64.deb
+Size: 66880
+MD5sum: b7deea1278c03ddc35c2e8977fd5fe40
+SHA256: d8c7bfd3134beeb1f2b19f19b12e9460d49498125a3a4781af91ba6b700a35f6
+
+Package: nmap
+Version: 7.93+dfsg1-1
+Installed-Size: 4422
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Architecture: arm64
+Depends: nmap-common (= 7.93+dfsg1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblinear4 (>= 2.01+dfsg), liblua5.3-0, libpcap0.8 (>= 1.5.1), libpcre3, libssh2-1 (>= 1.2.9), libssl3 (>= 3.0.0), libstdc++6 (>= 11), lua-lpeg (>= 1.0.2), zlib1g (>= 1:1.1.4)
+Suggests: ncat, ndiff, zenmap
+Description-en: The Network Mapper
+ Nmap is a utility for network exploration or security auditing. It
+ supports ping scanning (determine which hosts are up), many port
+ scanning techniques, version detection (determine service protocols
+ and application versions listening behind ports), and TCP/IP
+ fingerprinting (remote host OS or device identification). Nmap also
+ offers flexible target and port specification, decoy/stealth scanning,
+ sunRPC scanning, and more. Most Unix and Windows platforms are
+ supported in both GUI and commandline modes. Several popular handheld
+ devices are also supported, including the Sharp Zaurus and the iPAQ.
+Description-md5: bc417f4c1fdba7d8d9b0ca8a2a90b7a8
+Homepage: https://nmap.org/
+Tag: admin::monitoring, implemented-in::c, interface::commandline,
+ network::scanner, role::program, scope::utility, use::scanning
+Section: net
+Priority: optional
+Filename: pool/main/n/nmap/nmap_7.93+dfsg1-1_arm64.deb
+Size: 1839572
+MD5sum: 30ad91ec1fbce59ac51fa5525005e935
+SHA256: 5ca4664fa66d56eae827b9c8c481916244f778c6649b8fba59def665dd74779c
+
+Package: qemu-efi-aarch64
+Source: edk2
+Version: 2022.11-6+deb12u2
+Installed-Size: 264244
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: all
+Breaks: qemu-efi (<< 0~20161202.7bbe0b3e-2)
+Description-en: UEFI firmware for 64-bit ARM virtual machines
+ qemu-efi-aarch64 is a build of EDK II for 64-bit ARM virtual machines. It
+ includes full support for UEFI, including Secure Boot.
+Description-md5: 0191997e8e7dbde0e9009d3719a10aea
+Multi-Arch: foreign
+Homepage: http://www.tianocore.org
+Section: misc
+Priority: optional
+Filename: pool/main/e/edk2/qemu-efi-aarch64_2022.11-6+deb12u2_all.deb
+Size: 2538280
+MD5sum: 74a94ea4921e10af26a3418ec0bc5f48
+SHA256: 9a55c7b94fdf13a28928359a77d42e5364aa3ae2e558bd1fd5361955bf479d81
+
+Package: qemu-efi-aarch64
+Source: edk2
+Version: 2022.11-6+deb12u1
+Installed-Size: 264244
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: all
+Breaks: qemu-efi (<< 0~20161202.7bbe0b3e-2)
+Description-en: UEFI firmware for 64-bit ARM virtual machines
+ qemu-efi-aarch64 is a build of EDK II for 64-bit ARM virtual machines. It
+ includes full support for UEFI, including Secure Boot.
+Description-md5: 0191997e8e7dbde0e9009d3719a10aea
+Homepage: http://www.tianocore.org
+Multi-Arch: foreign
+Section: misc
+Priority: optional
+Filename: pool/updates/main/e/edk2/qemu-efi-aarch64_2022.11-6+deb12u1_all.deb
+Size: 2537752
+SHA256: 9b71800aad2ec7828aea3154ddceeed29d0275a1240eee79e4e71740ddeb0f17
+
+Package: qemu-system-arm
+Source: qemu
+Version: 1:7.2+dfsg-7+deb12u13
+Installed-Size: 43126
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: qemu-kvm
+Provides: qemu-kvm, qemu-system-aarch64
+Depends: libaio1 (>= 0.3.93), libbpf1 (>= 1:0.0.8), libc6 (>= 2.34), libcapstone4 (>= 4), libfdt1 (>= 1.6.1), libfuse3-3 (>= 3.2.3), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.67.3), libgmp10 (>= 2:6.2.1+dfsg1), libgnutls30 (>= 3.7.5), libhogweed6, libibverbs1 (>= 28), libjpeg62-turbo (>= 1.3.1), libnettle8, libnuma1 (>= 2.0.11), libpixman-1-0 (>= 0.30.0), libpmem1 (>= 1.4), libpng16-16 (>= 1.6.2-1), librdmacm1 (>= 1.0.15), libsasl2-2 (>= 2.1.28+dfsg), libseccomp2 (>= 2.1.0), libslirp0 (>= 4.7.0), libudev1 (>= 183), liburing2 (>= 2.3), libvdeplug2 (>= 4.0.1), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.0), qemu-system-common (= 1:7.2+dfsg-7+deb12u13), qemu-system-data (>> 1:7.2+dfsg~)
+Recommends: qemu-system-gui (= 1:7.2+dfsg-7+deb12u13), qemu-utils, ipxe-qemu, qemu-efi-aarch64, qemu-efi-arm, qemu-block-extra (= 1:7.2+dfsg-7+deb12u13)
+Suggests: samba, vde2
+Breaks: qemu-kvm
+Description-en: QEMU full system emulation binaries (arm)
+ QEMU is a fast processor emulator: currently the package supports
+ ARM emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following arm hardware:  aarch64 arm.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+Description-md5: 133b9ec73ea2f1bb3b0614f65ad95514
+Multi-Arch: foreign
+Homepage: http://www.qemu.org/
+Tag: uitoolkit::gtk, uitoolkit::ncurses, uitoolkit::sdl
+Section: otherosfs
+Priority: optional
+Filename: pool/main/q/qemu/qemu-system-arm_7.2+dfsg-7+deb12u13_arm64.deb
+Size: 8213716
+MD5sum: 40b4e44ec7ee44d209f5e634630eb9ea
+SHA256: ba803844c854348908a26dd9765e4ac4e1f09feac99953f40304232bfca040a5
+
+Package: qemu-system-gui
+Source: qemu
+Version: 1:7.2+dfsg-7+deb12u13
+Installed-Size: 1359
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: qemu-system-common (<< 1:6.1+dfsg-4~)
+Depends: libc6 (>= 2.34), libcairo2 (>= 1.2.4), libepoxy0 (>= 1.0), libgbm1 (>= 12.0.0~0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.61.2), libgtk-3-0 (>= 3.21.4), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libnuma1 (>= 2.0.11), libpixman-1-0 (>= 0.19.6), libpulse0 (>= 0.99.1), libsdl2-2.0-0 (>= 2.0.12), libvirglrenderer1 (>= 0.8.0), libvte-2.91-0 (>= 0.49.92), libx11-6, qemu-system-x86 (= 1:7.2+dfsg-7+deb12u13) | qemu-system-arm (= 1:7.2+dfsg-7+deb12u13) | qemu-system-mips (= 1:7.2+dfsg-7+deb12u13) | qemu-system-ppc (= 1:7.2+dfsg-7+deb12u13) | qemu-system-sparc (= 1:7.2+dfsg-7+deb12u13) | qemu-system-misc (= 1:7.2+dfsg-7+deb12u13), libgl1
+Description-en: QEMU full system emulation binaries (user interface and audio support)
+ This package provides local graphical user interface (currently GTK)
+ and audio backends for full system emulation (qemu-system-*) packages.
+ .
+ The default GTK based qemu-system-gui is generally better and recommended,
+ but a few corner cases still need SDL which is therefore provided as well.
+Description-md5: 6b583b414244908259538d87e8713531
+Homepage: http://www.qemu.org/
+Tag: uitoolkit::gtk, uitoolkit::sdl
+Section: otherosfs
+Priority: optional
+Filename: pool/main/q/qemu/qemu-system-gui_7.2+dfsg-7+deb12u13_arm64.deb
+Size: 298404
+MD5sum: 7f6b08c640ab83872b508b096c39b75f
+SHA256: 09bafb27e7d2bcc6eded5dde1ff8be1c9551615414f50266840a1196cf3ec874
+
+Package: qemu-utils
+Source: qemu
+Version: 1:7.2+dfsg-7+deb12u13
+Installed-Size: 7068
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libaio1 (>= 0.3.93), libc6 (>= 2.34), libfuse3-3 (>= 3.2.3), libglib2.0-0 (>= 2.67.3), libgmp10 (>= 2:6.2.1+dfsg1), libgnutls30 (>= 3.7.5), libhogweed6, libnettle8, libnuma1 (>= 2.0.11), libselinux1 (>= 3.1~), liburing2 (>= 2.3), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Recommends: qemu-block-extra (= 1:7.2+dfsg-7+deb12u13)
+Breaks: qemu-system-common (<< 1:3.1+dfsg-3~)
+Description-en: QEMU utilities
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides QEMU related utilities:
+  * qemu-img: QEMU disk image utility
+  * qemu-io:  QEMU disk exerciser
+  * qemu-nbd: QEMU disk network block device server
+Description-md5: 2c65298afe6300be7b1ce793bdf9fb81
+Multi-Arch: foreign
+Homepage: http://www.qemu.org/
+Tag: admin::kernel, admin::virtualization, devel::lang:c, devel::lang:python,
+ devel::library, implemented-in::c, implemented-in::python,
+ interface::commandline, role::devel-lib, role::program, scope::utility,
+ suite::openstack, system::cloud, system::virtual
+Section: otherosfs
+Priority: optional
+Filename: pool/main/q/qemu/qemu-utils_7.2+dfsg-7+deb12u13_arm64.deb
+Size: 1221988
+MD5sum: 7d098603d507519a1f3dcd4990c7df11
+SHA256: 5d648d523496d351b033a024706c11be337dac0d7271a5ffcaf720a3f4ebffdc
+
+Package: remmina
+Version: 1.4.29+dfsg-1
+Installed-Size: 957
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Architecture: arm64
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavahi-ui-gtk3-0 (>= 0.6.30), libayatana-appindicator3-1 (>= 0.4.90), libc6 (>= 2.34), libcairo2 (>= 1.6.0), libgcrypt20 (>= 1.10.0), libglib2.0-0 (>= 2.67.3), libgtk-3-0 (>= 3.21.5), libjson-glib-1.0-0 (>= 1.5.2), libpango-1.0-0 (>= 1.14.0), libsodium23 (>= 1.0.10), libssh-4 (>= 0.8.1), libvte-2.91-0 (>= 0.51.90), remmina-common (= 1.4.29+dfsg-1), default-dbus-session-bus | dbus-session-bus
+Recommends: remmina-plugin-rdp, remmina-plugin-vnc, remmina-plugin-secret
+Suggests: remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-python, remmina-plugin-www, remmina-plugin-x2go
+Description-en: GTK+ Remote Desktop Client
+ Remmina is a remote desktop client written in GTK+, aiming to be
+ useful for system administrators and travellers, who need to work
+ with lots of remote computers in front of either large monitors or
+ tiny netbooks.
+ .
+ Remmina supports multiple network protocols in an integrated and
+ consistent user interface.
+ .
+ Currently RDP, VNC, SPICE, WWW, X2Go, EXEC and SSH are supported.
+Description-md5: 8400107e3ca7d39a6c0f7badccff04ef
+Multi-Arch: foreign
+Homepage: https://www.remmina.org/
+Tag: interface::graphical, interface::x11, protocol::ssh, role::program,
+ uitoolkit::gtk, x11::application
+Section: x11
+Priority: optional
+Filename: pool/main/r/remmina/remmina_1.4.29+dfsg-1_arm64.deb
+Size: 197524
+MD5sum: 264c22e380212e491440540beb6e0f56
+SHA256: 2c52faa55cbfe1df877313aa2c7d3e7a217df1eaa3ae47869ce9b94f1a2bf455
+
+Package: remmina-plugin-rdp
+Source: remmina
+Version: 1.4.29+dfsg-1
+Installed-Size: 220
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libcairo2 (>= 1.6.0), libcups2 (>= 1.6.0), libfreerdp-client2-2 (>= 2.2.0~), libfreerdp2-2 (>= 2.3.0+dfsg1), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.67.3), libgtk-3-0 (>= 3.21.4), libwinpr2-2 (>= 2.1.0+dfsg1), remmina (= 1.4.29+dfsg-1)
+Description-en: RDP plugin for Remmina
+ Remmina is a remote desktop client written in GTK+, aiming to be
+ useful for system administrators and travellers, who need to work
+ with lots of remote computers in front of either large monitors or
+ tiny netbooks.
+ .
+ Remmina supports multiple network protocols in an integrated and
+ consistent user interface.
+ .
+ Currently RDP, VNC, SPICE, WWW, X2Go, EXEC and SSH are supported.
+ .
+ This package contains the RDP plugin for Remmina.
+Description-md5: 23fef9df2fe45eaeda34ac93aa32e7c2
+Multi-Arch: same
+Homepage: https://www.remmina.org/
+Tag: role::plugin, uitoolkit::gtk
+Section: gnome
+Priority: optional
+Filename: pool/main/r/remmina/remmina-plugin-rdp_1.4.29+dfsg-1_arm64.deb
+Size: 53504
+MD5sum: f8009268b62884b65cdee8b49a902012
+SHA256: 341f1bf08dcdbb1827b3d712a11dd8d361b0201a350de52d2684876f3cb59280
+
+Package: seabios
+Version: 1.16.2-1
+Installed-Size: 862
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Architecture: all
+Description-en: Legacy BIOS implementation
+ SeaBIOS is a legacy BIOS implementation, aimed at supporting not only
+ emulated hosts such as QEMU, but also real hardware.
+ .
+ Note, however, that SeaBIOS does not handle early initialization of core
+ chipsets, so don't even think of flashing it to your board (look at
+ Coreboot for that).
+Description-md5: 3c57ad8dc4b7367cefa8a011ed0fc235
+Multi-Arch: foreign
+Homepage: https://www.seabios.org
+Tag: role::app-data
+Section: otherosfs
+Priority: optional
+Filename: pool/main/s/seabios/seabios_1.16.2-1_all.deb
+Size: 162656
+MD5sum: e177e0cef6cbcb3ee807090c61dcf450
+SHA256: 08e5b3f761379f17a6051731cafa03e97686049e2cc1b8bdccc5a910646e2d8e
+
+Package: uuid-runtime
+Source: util-linux
+Version: 2.38.1-5+deb12u3
+Installed-Size: 274
+Maintainer: util-linux packagers <util-linux@packages.debian.org>
+Architecture: arm64
+Depends: adduser, libc6 (>= 2.34), libsmartcols1 (>= 2.27~rc1), libsystemd0, libuuid1 (>= 2.38.1-2~)
+Pre-Depends: libuuid1, init-system-helpers (>= 1.54~)
+Description-en: runtime components for the Universally Unique ID library
+ The libuuid library generates and parses 128-bit Universally Unique
+ IDs (UUIDs). A UUID is an identifier that is unique within the space
+ of all such identifiers across both space and time. It can be used for
+ multiple purposes, from tagging objects with an extremely short lifetime
+ to reliably identifying very persistent objects across a network.
+ .
+ See RFC 4122 for more information.
+ .
+ This package contains the uuidgen program and the uuidd daemon.
+ .
+ The uuidd daemon is used to generate UUIDs, especially time-based
+ UUIDs, in a secure and guaranteed-unique fashion, even in the face of
+ large numbers of threads trying to grab UUIDs running on different CPUs.
+ It is used by libuuid as well as the uuidgen program.
+Description-md5: c848721d4a6e6dbc698c36d06bf45ef9
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/pub/linux/utils/util-linux/
+Tag: role::program
+Section: utils
+Priority: optional
+Filename: pool/main/u/util-linux/uuid-runtime_2.38.1-5+deb12u3_arm64.deb
+Size: 50728
+MD5sum: 4c8b12990cac59078dab9e758c728d2b
+SHA256: ec80577364ed7bdd1dfcd8d0db9a7878f1c335d17867b20822077aa6242de411
+
+Package: uuid-runtime
+Source: util-linux
+Version: 2.38.1-5+deb12u1
+Installed-Size: 274
+Maintainer: util-linux packagers <util-linux@packages.debian.org>
+Architecture: arm64
+Depends: adduser, libc6 (>= 2.34), libsmartcols1 (>= 2.27~rc1), libsystemd0, libuuid1 (>= 2.38.1-2~)
+Description-en: runtime components for the Universally Unique ID library
+ The libuuid library generates and parses 128-bit Universally Unique
+ IDs (UUIDs). A UUID is an identifier that is unique within the space
+ of all such identifiers across both space and time. It can be used for
+ multiple purposes, from tagging objects with an extremely short lifetime
+ to reliably identifying very persistent objects across a network.
+ .
+ See RFC 4122 for more information.
+ .
+ This package contains the uuidgen program and the uuidd daemon.
+ .
+ The uuidd daemon is used to generate UUIDs, especially time-based
+ UUIDs, in a secure and guaranteed-unique fashion, even in the face of
+ large numbers of threads trying to grab UUIDs running on different CPUs.
+ It is used by libuuid as well as the uuidgen program.
+Description-md5: c848721d4a6e6dbc698c36d06bf45ef9
+Homepage: https://www.kernel.org/pub/linux/utils/util-linux/
+Multi-Arch: foreign
+Pre-Depends: libuuid1, init-system-helpers (>= 1.54~)
+Section: utils
+Priority: optional
+Filename: pool/updates/main/u/util-linux/uuid-runtime_2.38.1-5+deb12u1_arm64.deb
+Size: 50516
+SHA256: 0d788fde91d8dbe4afa4c38991e13140964e7c1be49235e50195fff56ad729fa
+
+Package: wimtools
+Source: wimlib
+Version: 1.13.6-1
+Installed-Size: 2355
+Maintainer: Hilko Bengen <bengen@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libwim15 (>= 1.13.0)
+Suggests: genisoimage, mtools, syslinux, cabextract
+Description-en: Tools for manipulating Windows Imaging files
+ WIM is an archive format designed primarily for archiving Windows
+ filesystems. It features single-instancing and LZ77-based
+ compression, and is used by Microsoft to distribute and deploy
+ Windows Vista and later.
+ .
+ This package contains a free implementation of the ImageX utility
+ that is used to create WIM files on Windows.
+Description-md5: 41ca2f36b8bce876dc32dd8b6aa86924
+Multi-Arch: foreign
+Homepage: http://wimlib.net/
+Section: otherosfs
+Priority: optional
+Filename: pool/main/w/wimlib/wimtools_1.13.6-1_arm64.deb
+Size: 103772
+MD5sum: 567694d0dad4bb1289a5d43137170033
+SHA256: 39df7d237d207637895ed3e39638c65cad8a94e76ca0a81efda3af0dddd3236b
+
+freerdp2-wayland:
+  Installed: (none)
+  Candidate: 2.10.0+dfsg1-1
+  Version table:
+     2.10.0+dfsg1-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+ipxe-qemu:
+  Installed: (none)
+  Candidate: 1.0.0+git-20190125.36a4c85-5.1
+  Version table:
+     1.0.0+git-20190125.36a4c85-5.1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+        500 http://deb.debian.org/debian bookworm/main armhf Packages
+netcat-traditional:
+  Installed: (none)
+  Candidate: 1.10-47
+  Version table:
+     1.10-47 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+nmap:
+  Installed: (none)
+  Candidate: 7.93+dfsg1-1
+  Version table:
+     7.93+dfsg1-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+qemu-efi-aarch64:
+  Installed: (none)
+  Candidate: 2022.11-6+deb12u2
+  Version table:
+     2022.11-6+deb12u2 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+        500 http://deb.debian.org/debian bookworm/main armhf Packages
+     2022.11-6+deb12u1 500
+        500 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages
+        500 http://deb.debian.org/debian-security bookworm-security/main armhf Packages
+qemu-system-arm:
+  Installed: (none)
+  Candidate: 1:7.2+dfsg-7+deb12u13
+  Version table:
+     1:7.2+dfsg-7+deb12u13 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+qemu-system-gui:
+  Installed: (none)
+  Candidate: 1:7.2+dfsg-7+deb12u13
+  Version table:
+     1:7.2+dfsg-7+deb12u13 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+qemu-utils:
+  Installed: (none)
+  Candidate: 1:7.2+dfsg-7+deb12u13
+  Version table:
+     1:7.2+dfsg-7+deb12u13 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+remmina:
+  Installed: (none)
+  Candidate: 1.4.29+dfsg-1
+  Version table:
+     1.4.29+dfsg-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+remmina-plugin-rdp:
+  Installed: (none)
+  Candidate: 1.4.29+dfsg-1
+  Version table:
+     1.4.29+dfsg-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+seabios:
+  Installed: (none)
+  Candidate: 1.16.2-1
+  Version table:
+     1.16.2-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+        500 http://deb.debian.org/debian bookworm/main armhf Packages
+uuid-runtime:
+  Installed: (none)
+  Candidate: 2.38.1-5+deb12u3
+  Version table:
+     2.38.1-5+deb12u3 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+     2.38.1-5+deb12u1 500
+        500 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages
+wimtools:
+  Installed: (none)
+  Candidate: 1.13.6-1
+  Version table:
+     1.13.6-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+Listing...
+freerdp2-wayland/stable 2.10.0+dfsg1-1 arm64
+
+freerdp2-wayland/stable 2.10.0+dfsg1-1 armhf
+
+ipxe-qemu/stable,stable 1.0.0+git-20190125.36a4c85-5.1 all
+
+netcat-traditional/stable 1.10-47 arm64
+
+netcat-traditional/stable 1.10-47 armhf
+
+nmap/stable 7.93+dfsg1-1 arm64
+
+nmap/stable 7.93+dfsg1-1 armhf
+
+qemu-efi-aarch64/stable,stable 2022.11-6+deb12u2 all
+qemu-efi-aarch64/stable-security,stable-security 2022.11-6+deb12u1 all
+
+qemu-system-arm/stable 1:7.2+dfsg-7+deb12u13 arm64
+
+qemu-system-arm/stable 1:7.2+dfsg-7+deb12u13 armhf
+
+qemu-system-gui/stable 1:7.2+dfsg-7+deb12u13 arm64
+
+qemu-system-gui/stable 1:7.2+dfsg-7+deb12u13 armhf
+
+qemu-utils/stable 1:7.2+dfsg-7+deb12u13 arm64
+
+qemu-utils/stable 1:7.2+dfsg-7+deb12u13 armhf
+
+remmina-plugin-rdp/stable 1.4.29+dfsg-1 arm64
+
+remmina-plugin-rdp/stable 1.4.29+dfsg-1 armhf
+
+remmina/stable 1.4.29+dfsg-1 arm64
+
+remmina/stable 1.4.29+dfsg-1 armhf
+
+seabios/stable,stable 1.16.2-1 all
+
+uuid-runtime/stable 2.38.1-5+deb12u3 arm64
+uuid-runtime/stable-security 2.38.1-5+deb12u1 arm64
+
+uuid-runtime/stable 2.38.1-5+deb12u3 armhf
+uuid-runtime/stable-security 2.38.1-5+deb12u1 armhf
+
+wimtools/stable 1.13.6-1 arm64
+
+wimtools/stable 1.13.6-1 armhf
+
+NOTE: This is only a simulation!
+      apt-get needs root privileges for real execution.
+      Keep also in mind that locking is deactivated,
+      so don't depend on the relevance to the real current situation!
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  ceph-common ceph-fuse corosync criu cstream dkms dmeventd dtach ebtables
+  faketime fonts-font-awesome fonts-font-logos fonts-glyphicons-halflings
+  glusterfs-client glusterfs-common hdparm idn ipset jc libanyevent-http-perl
+  libanyevent-perl libappconfig-perl libapt-pkg-perl libasync-interrupt-perl
+  libauthen-pam-perl libbasicusageenvironment1 libcephfs2 libcmap4
+  libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl
+  libcrypt-openssl-rsa-perl libdbi1 libdevel-cycle-perl
+  libdevmapper-event1.02.1 libdigest-bubblebabble-perl libev-perl libfaketime
+  libfile-chdir-perl libfile-readbackwards-perl libfilesys-df-perl
+  libgfchangelog0 libglusterd0 libgnutlsxx30 libgoogle-perftools4
+  libgroupsock8 libguard-perl libio-multiplex-perl libio-stringy-perl
+  libipset13 libiscsi7 libjs-bootstrap libjs-extjs libjs-qrcodejs
+  libjs-sencha-touch libknet1 liblinux-inotify2-perl liblivemedia77
+  liblvm2cmd2.03 libmime-base32-perl libnet-dns-perl libnet-dns-sec-perl
+  libnet-ip-perl libnet-libidn2-perl libnet-subnet-perl libnet1
+  libnetaddr-ip-perl libnetfilter-log1 libnozzle1 libnvpair3linux liboath0
+  libperl4-corelibs-perl libposix-strptime-perl libproxmox-acme-perl
+  libproxmox-acme-plugins libproxmox-backup-qemu0 libproxmox-rs-perl
+  libpve-access-control libpve-apiclient-perl libpve-cluster-api-perl
+  libpve-cluster-perl libpve-common-perl libpve-guest-common-perl
+  libpve-http-server-perl libpve-network-api-perl libpve-network-perl
+  libpve-notify-perl libpve-rs-perl libpve-storage-perl libpve-u2f-server-perl
+  libquorum5 librados2-perl libradosstriper1 librdkafka1 librgw2 librrd8
+  librrds-perl libstatgrab10 libstring-shellquote-perl libsubid4
+  libtcmalloc-minimal4 libtemplate-perl libthrift-0.17.0 libtpms0
+  libu2f-server0 libuuid-perl libuutil3linux libvotequorum8
+  libyaml-libyaml-perl libzfs6linux libzpool6linux
+  linux-headers-6.1.0-37-arm64 linux-headers-6.1.0-37-common
+  linux-headers-arm64 linux-kbuild-6.1 lvm2 lxc-pve lxcfs novnc-pve numactl
+  proxmox-archive-keyring proxmox-backup-client proxmox-backup-file-restore
+  proxmox-backup-restore-image proxmox-firewall proxmox-kernel-helper
+  proxmox-mail-forward proxmox-mini-journalreader proxmox-offline-mirror-docs
+  proxmox-offline-mirror-helper proxmox-termproxy proxmox-websocket-tunnel
+  proxmox-widget-toolkit pve-cluster pve-docs pve-edk2-firmware-legacy
+  pve-edk2-firmware-ovmf pve-firewall pve-i18n pve-lxc-syscalld pve-xtermjs
+  python3-ceph-argparse python3-ceph-common python3-cephfs python3-prettytable
+  python3-protobuf python3-rados python3-rbd python3-rgw python3-ruamel.yaml
+  python3-ruamel.yaml.clib python3-wcwidth python3-xmltodict qrencode
+  rrdcached smartmontools sqlite3 swtpm swtpm-libs swtpm-tools
+  thin-provisioning-tools uidmap vncterm xsltproc zfs-dkms zfs-zed
+  zfsutils-linux
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  libavahi-ui-gtk3-0 libayatana-appindicator3-1 libbrlapi0.8 libcacard0
+  libexecs0 libfreerdp-client2-2 libfreerdp2-2 liblinear4 libssh-4 libuwac0-0
+  libvdeplug2 libwim15 libwinpr2-2 lua-lpeg nmap-common qemu-system-common
+  qemu-system-data remmina-common
+Suggested packages:
+  freerdp2-x11 liblinear-tools liblinear-dev ncat ndiff zenmap samba vde2
+  remmina-plugin-exec remmina-plugin-kwallet remmina-plugin-python
+  remmina-plugin-www remmina-plugin-x2go mtools syslinux cabextract
+Recommended packages:
+  qemu-efi-arm qemu-block-extra remmina-plugin-vnc remmina-plugin-secret
+The following packages will be REMOVED:
+  proxmox-ve pve-container pve-ha-manager pve-manager pve-qemu-kvm qemu-server
+  spiceterm
+The following NEW packages will be installed:
+  freerdp2-wayland ipxe-qemu libavahi-ui-gtk3-0 libayatana-appindicator3-1
+  libbrlapi0.8 libcacard0 libexecs0 libfreerdp-client2-2 libfreerdp2-2
+  liblinear4 libssh-4 libuwac0-0 libvdeplug2 libwim15 libwinpr2-2 lua-lpeg
+  netcat-traditional nmap nmap-common qemu-efi-aarch64 qemu-system-arm
+  qemu-system-common qemu-system-data qemu-system-gui qemu-utils remmina
+  remmina-common remmina-plugin-rdp seabios uuid-runtime wimtools
+0 upgraded, 31 newly installed, 7 to remove and 4 not upgraded.
+Remv proxmox-ve [8.3.0]
+Remv pve-manager [8.3.3]
+Remv spiceterm [3.3.0]
+Remv pve-qemu-kvm [9.2.0-2] [qemu-server:arm64 ]
+Remv qemu-server [8.3.7] [pve-ha-manager:arm64 ]
+Remv pve-ha-manager [4.0.6] [pve-container:arm64 ]
+Remv pve-container [5.2.2+port1]
+Inst uuid-runtime (2.38.1-5+deb12u3 Debian:12.11/stable [arm64])
+Inst netcat-traditional (1.10-47 Debian:12.11/stable [arm64])
+Inst libwinpr2-2 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Inst libfreerdp2-2 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Inst libfreerdp-client2-2 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Inst libuwac0-0 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Inst freerdp2-wayland (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Inst ipxe-qemu (1.0.0+git-20190125.36a4c85-5.1 Debian:12.11/stable [all])
+Inst libavahi-ui-gtk3-0 (0.8-10+deb12u1 Debian:12.11/stable [arm64])
+Inst libayatana-appindicator3-1 (0.5.92-1 Debian:12.11/stable [arm64])
+Inst libbrlapi0.8 (6.5-7+deb12u1 Debian:12.11/stable [arm64])
+Inst libcacard0 (1:2.8.0-3 Debian:12.11/stable [arm64])
+Inst libexecs0 (1.3-2 Debian:12.11/stable [arm64])
+Inst liblinear4 (2.3.0+dfsg-5 Debian:12.11/stable [arm64])
+Inst libssh-4 (0.10.6-0+deb12u1 Debian:12.11/stable, Debian-Security:12/stable-security [arm64])
+Inst libvdeplug2 (4.0.1-4 Debian:12.11/stable [arm64])
+Inst libwim15 (1.13.6-1 Debian:12.11/stable [arm64])
+Inst lua-lpeg (1.0.2-2 Debian:12.11/stable [arm64])
+Inst nmap-common (7.93+dfsg1-1 Debian:12.11/stable [all])
+Inst nmap (7.93+dfsg1-1 Debian:12.11/stable [arm64])
+Inst qemu-efi-aarch64 (2022.11-6+deb12u2 Debian:12.11/stable [all])
+Inst qemu-system-common (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Inst qemu-system-data (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [all])
+Inst qemu-system-arm (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Inst qemu-system-gui (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Inst qemu-utils (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Inst remmina-common (1.4.29+dfsg-1 Debian:12.11/stable [all])
+Inst remmina (1.4.29+dfsg-1 Debian:12.11/stable [arm64])
+Inst remmina-plugin-rdp (1.4.29+dfsg-1 Debian:12.11/stable [arm64])
+Inst seabios (1.16.2-1 Debian:12.11/stable [all])
+Inst wimtools (1.13.6-1 Debian:12.11/stable [arm64])
+Conf uuid-runtime (2.38.1-5+deb12u3 Debian:12.11/stable [arm64])
+Conf netcat-traditional (1.10-47 Debian:12.11/stable [arm64])
+Conf libwinpr2-2 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Conf libfreerdp2-2 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Conf libfreerdp-client2-2 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Conf libuwac0-0 (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Conf freerdp2-wayland (2.10.0+dfsg1-1 Debian:12.11/stable [arm64])
+Conf ipxe-qemu (1.0.0+git-20190125.36a4c85-5.1 Debian:12.11/stable [all])
+Conf libavahi-ui-gtk3-0 (0.8-10+deb12u1 Debian:12.11/stable [arm64])
+Conf libayatana-appindicator3-1 (0.5.92-1 Debian:12.11/stable [arm64])
+Conf libbrlapi0.8 (6.5-7+deb12u1 Debian:12.11/stable [arm64])
+Conf libcacard0 (1:2.8.0-3 Debian:12.11/stable [arm64])
+Conf libexecs0 (1.3-2 Debian:12.11/stable [arm64])
+Conf liblinear4 (2.3.0+dfsg-5 Debian:12.11/stable [arm64])
+Conf libssh-4 (0.10.6-0+deb12u1 Debian:12.11/stable, Debian-Security:12/stable-security [arm64])
+Conf libvdeplug2 (4.0.1-4 Debian:12.11/stable [arm64])
+Conf libwim15 (1.13.6-1 Debian:12.11/stable [arm64])
+Conf lua-lpeg (1.0.2-2 Debian:12.11/stable [arm64])
+Conf nmap-common (7.93+dfsg1-1 Debian:12.11/stable [all])
+Conf nmap (7.93+dfsg1-1 Debian:12.11/stable [arm64])
+Conf qemu-efi-aarch64 (2022.11-6+deb12u2 Debian:12.11/stable [all])
+Conf qemu-system-common (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Conf qemu-system-data (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [all])
+Conf qemu-system-arm (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Conf qemu-system-gui (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Conf qemu-utils (1:7.2+dfsg-7+deb12u13 Debian:12.11/stable [arm64])
+Conf remmina-common (1.4.29+dfsg-1 Debian:12.11/stable [all])
+Conf remmina (1.4.29+dfsg-1 Debian:12.11/stable [arm64])
+Conf remmina-plugin-rdp (1.4.29+dfsg-1 Debian:12.11/stable [arm64])
+Conf seabios (1.16.2-1 Debian:12.11/stable [all])
+Conf wimtools (1.13.6-1 Debian:12.11/stable [arm64])
+http://archive.raspberrypi.com/debian bookworm main deb $(ARCHITECTURE)
+http://archive.raspberrypi.com/debian bookworm main deb all
+http://archive.raspberrypi.com/debian bookworm main deb arm64
+http://archive.raspberrypi.com/debian bookworm main deb armhf
+http://deb.debian.org/debian bookworm contrib deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm contrib deb all
+http://deb.debian.org/debian bookworm contrib deb arm64
+http://deb.debian.org/debian bookworm contrib deb armhf
+http://deb.debian.org/debian bookworm main deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm main deb all
+http://deb.debian.org/debian bookworm main deb arm64
+http://deb.debian.org/debian bookworm main deb armhf
+http://deb.debian.org/debian bookworm non-free deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm non-free deb all
+http://deb.debian.org/debian bookworm non-free deb arm64
+http://deb.debian.org/debian bookworm non-free deb armhf
+http://deb.debian.org/debian bookworm non-free-firmware deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm non-free-firmware deb all
+http://deb.debian.org/debian bookworm non-free-firmware deb arm64
+http://deb.debian.org/debian bookworm non-free-firmware deb armhf
+http://deb.debian.org/debian bookworm-updates contrib deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm-updates contrib deb all
+http://deb.debian.org/debian bookworm-updates contrib deb arm64
+http://deb.debian.org/debian bookworm-updates contrib deb armhf
+http://deb.debian.org/debian bookworm-updates main deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm-updates main deb all
+http://deb.debian.org/debian bookworm-updates main deb arm64
+http://deb.debian.org/debian bookworm-updates main deb armhf
+http://deb.debian.org/debian bookworm-updates non-free deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm-updates non-free deb all
+http://deb.debian.org/debian bookworm-updates non-free deb arm64
+http://deb.debian.org/debian bookworm-updates non-free deb armhf
+http://deb.debian.org/debian bookworm-updates non-free-firmware deb $(ARCHITECTURE)
+http://deb.debian.org/debian bookworm-updates non-free-firmware deb all
+http://deb.debian.org/debian bookworm-updates non-free-firmware deb arm64
+http://deb.debian.org/debian bookworm-updates non-free-firmware deb armhf
+http://deb.debian.org/debian-security bookworm-security contrib deb $(ARCHITECTURE)
+http://deb.debian.org/debian-security bookworm-security contrib deb all
+http://deb.debian.org/debian-security bookworm-security contrib deb arm64
+http://deb.debian.org/debian-security bookworm-security contrib deb armhf
+http://deb.debian.org/debian-security bookworm-security main deb $(ARCHITECTURE)
+http://deb.debian.org/debian-security bookworm-security main deb all
+http://deb.debian.org/debian-security bookworm-security main deb arm64
+http://deb.debian.org/debian-security bookworm-security main deb armhf
+http://deb.debian.org/debian-security bookworm-security non-free deb $(ARCHITECTURE)
+http://deb.debian.org/debian-security bookworm-security non-free deb all
+http://deb.debian.org/debian-security bookworm-security non-free deb arm64
+http://deb.debian.org/debian-security bookworm-security non-free deb armhf
+http://deb.debian.org/debian-security bookworm-security non-free-firmware deb $(ARCHITECTURE)
+http://deb.debian.org/debian-security bookworm-security non-free-firmware deb all
+http://deb.debian.org/debian-security bookworm-security non-free-firmware deb arm64
+http://deb.debian.org/debian-security bookworm-security non-free-firmware deb armhf
+https://adoptium.jfrog.io/artifactory/deb bookworm main deb $(ARCHITECTURE)
+https://adoptium.jfrog.io/artifactory/deb bookworm main deb all
+https://adoptium.jfrog.io/artifactory/deb bookworm main deb arm64
+https://adoptium.jfrog.io/artifactory/deb bookworm main deb armhf
+https://download.docker.com/linux/debian bookworm stable deb $(ARCHITECTURE)
+https://download.docker.com/linux/debian bookworm stable deb all
+https://download.docker.com/linux/debian bookworm stable deb arm64
+https://mirrors.apqa.cn/proxmox/debian/pve bookworm port deb $(ARCHITECTURE)
+https://mirrors.apqa.cn/proxmox/debian/pve bookworm port deb all
+https://mirrors.apqa.cn/proxmox/debian/pve bookworm port deb arm64
+foreign architectures: armhf
